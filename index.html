@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>duckyscript gen</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Simple duckyscript generator</h1>
+            <div class="description">
+                Генератор скриптов для быстрого открытия URL через Run Box.
+                <br />
+                Поддерживает прошивки Rubber Ducky, Flipper Zero, Bruce, Arduino
+                BadUSB
+            </div>
+
+            <div class="config-table">
+                <label for="filename">Имя файла (.txt)</label>
+                <input
+                    type="text"
+                    id="filename"
+                    value="script"
+                    placeholder="например: payload"
+                />
+
+                <label for="url">URL адрес</label>
+                <input
+                    type="url"
+                    id="url"
+                    placeholder="https://example.com"
+                    value="https://google.com"
+                />
+
+                <label for="os">Целевая ОС</label>
+                <select id="os">
+                    <option value="windows">Windows (Win+R)</option>
+                    <option value="macos">macOS (Spotlight)</option>
+                    <option value="linux">Linux Gnome (Alt+F2)</option>
+                </select>
+
+                <label for="initDelay">Старт (мс)</label>
+                <div class="input-group">
+                    <input type="number" id="initDelay" value="1000" />
+                    <div class="hint">Ожидание инициализации флешки</div>
+                </div>
+
+                <label for="cmdDelay">Пауза команд (мс)</label>
+                <div class="input-group">
+                    <input type="number" id="cmdDelay" value="500" />
+                    <div class="hint">Задержка между шагами</div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="generateBtn">Сгенерировать</button>
+                <button id="downloadBtn" class="secondary" disabled>
+                    Скачать
+                </button>
+            </div>
+
+            <div id="output-area">
+                <textarea id="result" readonly></textarea>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
