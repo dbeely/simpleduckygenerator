@@ -59,7 +59,7 @@ select {
     background: #fff;
     border-radius: 4px;
     box-sizing: border-box;
-    font-family: inherit;
+    font-family: "Comfortaa", sans-serif;
 }
 
 input:focus,
@@ -79,20 +79,21 @@ select:focus {
 }
 
 .actions {
-    display: flex; /* Здесь Flexbox лучше подходит для кнопок */
+    display: flex;
     gap: 10px;
     justify-content: center;
     margin-bottom: 20px;
 }
 
 button {
+    font-family: "Comfortaa", sans-serif;
     background-color: var(--accent-color);
     color: #fff;
     border: none;
     padding: 10px 25px;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: opacity 0.2s;
 }
 
