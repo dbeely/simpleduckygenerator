@@ -1,3 +1,3 @@
 # simpleduckygenerator
 сайт для генерации простых ducky скрптов
-[ссылка](https://dbeely.github.io/simpleduckygenerator/)
+[ссылка на сайт](https://dbeely.github.io/simpleduckygenerator/)
